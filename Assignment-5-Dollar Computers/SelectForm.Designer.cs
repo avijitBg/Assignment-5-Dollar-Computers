@@ -30,6 +30,10 @@
         {
             this.HeadingLabel = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.YourSelectionLabel = new System.Windows.Forms.Label();
+            this.YourSelectionTextBox = new System.Windows.Forms.TextBox();
+            this.SelectNextButton = new System.Windows.Forms.Button();
+            this.SelectCancelButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -39,25 +43,70 @@
             this.HeadingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HeadingLabel.Location = new System.Drawing.Point(13, 13);
             this.HeadingLabel.Name = "HeadingLabel";
-            this.HeadingLabel.Size = new System.Drawing.Size(204, 25);
+            this.HeadingLabel.Size = new System.Drawing.Size(287, 25);
             this.HeadingLabel.TabIndex = 0;
-            this.HeadingLabel.Text = "Select Your Computer";
+            this.HeadingLabel.Text = "Dollar Computers Hardware List";
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(13, 59);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(652, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(775, 150);
             this.dataGridView1.TabIndex = 1;
+            // 
+            // YourSelectionLabel
+            // 
+            this.YourSelectionLabel.AutoSize = true;
+            this.YourSelectionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.YourSelectionLabel.Location = new System.Drawing.Point(7, 405);
+            this.YourSelectionLabel.Name = "YourSelectionLabel";
+            this.YourSelectionLabel.Size = new System.Drawing.Size(198, 31);
+            this.YourSelectionLabel.TabIndex = 2;
+            this.YourSelectionLabel.Text = "Your Selection:";
+            // 
+            // YourSelectionTextBox
+            // 
+            this.YourSelectionTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.YourSelectionTextBox.Location = new System.Drawing.Point(211, 408);
+            this.YourSelectionTextBox.Name = "YourSelectionTextBox";
+            this.YourSelectionTextBox.ReadOnly = true;
+            this.YourSelectionTextBox.Size = new System.Drawing.Size(340, 30);
+            this.YourSelectionTextBox.TabIndex = 3;
+            // 
+            // SelectNextButton
+            // 
+            this.SelectNextButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SelectNextButton.Location = new System.Drawing.Point(596, 408);
+            this.SelectNextButton.Name = "SelectNextButton";
+            this.SelectNextButton.Size = new System.Drawing.Size(75, 30);
+            this.SelectNextButton.TabIndex = 4;
+            this.SelectNextButton.Text = "Next";
+            this.SelectNextButton.UseVisualStyleBackColor = true;
+            // 
+            // SelectCancelButton
+            // 
+            this.SelectCancelButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SelectCancelButton.Location = new System.Drawing.Point(713, 408);
+            this.SelectCancelButton.Name = "SelectCancelButton";
+            this.SelectCancelButton.Size = new System.Drawing.Size(75, 30);
+            this.SelectCancelButton.TabIndex = 5;
+            this.SelectCancelButton.Text = "Cancel";
+            this.SelectCancelButton.UseVisualStyleBackColor = true;
             // 
             // SelectForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ControlBox = false;
+            this.Controls.Add(this.SelectCancelButton);
+            this.Controls.Add(this.SelectNextButton);
+            this.Controls.Add(this.YourSelectionTextBox);
+            this.Controls.Add(this.YourSelectionLabel);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.HeadingLabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MinimizeBox = false;
             this.Name = "SelectForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Select Your Computer";
@@ -72,6 +121,10 @@
 
         private System.Windows.Forms.Label HeadingLabel;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label YourSelectionLabel;
+        private System.Windows.Forms.TextBox YourSelectionTextBox;
+        private System.Windows.Forms.Button SelectNextButton;
+        private System.Windows.Forms.Button SelectCancelButton;
     }
 }
 
