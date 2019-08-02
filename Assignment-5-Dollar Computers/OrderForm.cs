@@ -32,5 +32,10 @@ namespace Assignment_5_Dollar_Computers
         {
             Application.Exit();
         }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Program.aboutBox.ShowDialog();
+        }
     }
 }
