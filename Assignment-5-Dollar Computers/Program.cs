@@ -6,7 +6,7 @@ using System.Windows.Forms;
 /*Assignment-5: Dollar Computers
  * Author: Avijit Bagchi
  * ID# 301007115
- * Version: 1.1 StartForm created
+ * Version: 1.2 SplashForm created
  * Last Modified: August 2, 2019
  */
 namespace Assignment_5_Dollar_Computers
@@ -16,6 +16,7 @@ namespace Assignment_5_Dollar_Computers
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
+        public static SplashForm splashForm;
         public static StartForm startForm;
         public static SelectForm selectForm;
         [STAThread]
@@ -23,6 +24,7 @@ namespace Assignment_5_Dollar_Computers
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            splashForm = new SplashForm();
             startForm = new StartForm();
             selectForm = new SelectForm();
             Application.Run(new StartForm());
