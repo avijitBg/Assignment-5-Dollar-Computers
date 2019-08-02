@@ -8,7 +8,7 @@ using System.Windows.Forms;
 /*Assignment-5: Dollar Computers
  * Author: Avijit Bagchi
  * ID# 301007115
- * Version: 1.6 UI Completed
+ * Version: 2.0 Data Gridview connected to localdb server
  * Last Modified: August 2, 2019
  */
 namespace Assignment_5_Dollar_Computers.View
@@ -42,7 +42,7 @@ namespace Assignment_5_Dollar_Computers.View
             orderForm = new OrderForm();
             AboutBox = new AboutBox();
             products = new Product();
-            Application.Run(new SelectForm());
+            Application.Run(new SplashForm());
         }
     }
 }
