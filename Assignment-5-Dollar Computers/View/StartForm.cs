@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Assignment_5_Dollar_Computers
+namespace Assignment_5_Dollar_Computers.View
 {
     public partial class StartForm : Form
     {

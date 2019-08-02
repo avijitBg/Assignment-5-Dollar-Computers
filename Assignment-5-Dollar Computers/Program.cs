@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Assignment_5_Dollar_Computers.Data;
+using Assignment_5_Dollar_Computers.View;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -6,12 +8,12 @@ using System.Windows.Forms;
 /*Assignment-5: Dollar Computers
  * Author: Avijit Bagchi
  * ID# 301007115
- * Version: 1.5 AboutBox created
+ * Version: 1.6 UI Completed
  * Last Modified: August 2, 2019
  */
-namespace Assignment_5_Dollar_Computers
+namespace Assignment_5_Dollar_Computers.View
 {
-    static class Program
+    public static class Program
     {
         /// <summary>
         /// The main entry point for the application.
@@ -21,7 +23,13 @@ namespace Assignment_5_Dollar_Computers
         public static SelectForm selectForm;
         public static ProductInfoForm productInfoForm;
         public static OrderForm orderForm;
-        public static AboutBox aboutBox;
+        private static AboutBox aboutBox;
+        public static Product products;
+
+        internal static AboutBox AboutBox { get => aboutBox; set => aboutBox = value; }
+
+        //internal static AboutBox AboutBox { get => aboutBox; set => aboutBox = value; }
+
         [STAThread]
         static void Main()
         {
@@ -32,8 +40,9 @@ namespace Assignment_5_Dollar_Computers
             selectForm = new SelectForm();
             productInfoForm = new ProductInfoForm();
             orderForm = new OrderForm();
-            aboutBox = new AboutBox();
-            Application.Run(new SplashForm());
+            AboutBox = new AboutBox();
+            products = new Product();
+            Application.Run(new SelectForm());
         }
     }
 }

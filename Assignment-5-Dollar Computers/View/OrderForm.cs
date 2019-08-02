@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Assignment_5_Dollar_Computers
+namespace Assignment_5_Dollar_Computers.View
 {
     public partial class OrderForm : Form
     {
@@ -35,7 +35,12 @@ namespace Assignment_5_Dollar_Computers
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Program.aboutBox.ShowDialog();
+            Program.AboutBox.ShowDialog();
+        }
+
+        private void OrderForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

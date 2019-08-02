@@ -1,4 +1,4 @@
-﻿namespace Assignment_5_Dollar_Computers
+﻿namespace Assignment_5_Dollar_Computers.View
 {
     partial class SplashForm
     {
@@ -60,6 +60,7 @@
             this.Controls.Add(this.WelcomeLabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SplashForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SplashForm";
             this.Load += new System.EventHandler(this.SplashForm_Load);
             this.ResumeLayout(false);

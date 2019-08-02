@@ -1,4 +1,4 @@
-﻿namespace Assignment_5_Dollar_Computers
+﻿namespace Assignment_5_Dollar_Computers.View
 {
     partial class OrderForm
     {
@@ -237,7 +237,7 @@
             // 
             this.LCDSizelabel.AutoSize = true;
             this.LCDSizelabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LCDSizelabel.Location = new System.Drawing.Point(40, 16);
+            this.LCDSizelabel.Location = new System.Drawing.Point(40, 20);
             this.LCDSizelabel.Name = "LCDSizelabel";
             this.LCDSizelabel.Size = new System.Drawing.Size(74, 17);
             this.LCDSizelabel.TabIndex = 0;
@@ -632,12 +632,12 @@
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator5.Size = new System.Drawing.Size(113, 6);
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.aboutToolStripMenuItem.Text = "&About...";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
@@ -658,6 +658,7 @@
             this.Name = "OrderForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Order Form";
+            this.Load += new System.EventHandler(this.OrderForm_Load);
             this.SystemPropertiesGroupBox.ResumeLayout(false);
             this.SystemPropertiesGroupBox.PerformLayout();
             this.groupBox1.ResumeLayout(false);

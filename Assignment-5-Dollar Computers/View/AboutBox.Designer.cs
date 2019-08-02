@@ -1,4 +1,4 @@
-﻿namespace Assignment_5_Dollar_Computers
+﻿namespace Assignment_5_Dollar_Computers.View
 {
     partial class AboutBox
     {
@@ -170,6 +170,7 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "About Dollar Computers";
+            this.Load += new System.EventHandler(this.AboutBox_Load);
             this.tableLayoutPanel.ResumeLayout(false);
             this.tableLayoutPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).EndInit();

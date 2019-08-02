@@ -1,4 +1,4 @@
-﻿namespace Assignment_5_Dollar_Computers
+﻿namespace Assignment_5_Dollar_Computers.View
 {
     partial class StartForm
     {
