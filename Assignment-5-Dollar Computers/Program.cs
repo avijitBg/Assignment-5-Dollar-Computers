@@ -6,7 +6,7 @@ using System.Windows.Forms;
 /*Assignment-5: Dollar Computers
  * Author: Avijit Bagchi
  * ID# 301007115
- * Version: 1.3 ProductInfoForm created
+ * Version: 1.4 OrderForm created
  * Last Modified: August 3, 2019
  */
 namespace Assignment_5_Dollar_Computers
@@ -19,6 +19,8 @@ namespace Assignment_5_Dollar_Computers
         public static SplashForm splashForm;
         public static StartForm startForm;
         public static SelectForm selectForm;
+        public static ProductInfoForm productInfoForm;
+        public static OrderForm orderForm;
         [STAThread]
         static void Main()
         {
@@ -27,7 +29,9 @@ namespace Assignment_5_Dollar_Computers
             splashForm = new SplashForm();
             startForm = new StartForm();
             selectForm = new SelectForm();
-            Application.Run(new ProductInfoForm());
+            productInfoForm = new ProductInfoForm();
+            orderForm = new OrderForm();
+            Application.Run(new SplashForm());
         }
     }
 }

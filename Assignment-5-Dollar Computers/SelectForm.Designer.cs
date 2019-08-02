@@ -85,6 +85,7 @@
             this.SelectNextButton.TabIndex = 4;
             this.SelectNextButton.Text = "Next";
             this.SelectNextButton.UseVisualStyleBackColor = false;
+            this.SelectNextButton.Click += new System.EventHandler(this.SelectNextButton_Click);
             // 
             // SelectCancelButton
             // 
@@ -97,6 +98,7 @@
             this.SelectCancelButton.TabIndex = 5;
             this.SelectCancelButton.Text = "Cancel";
             this.SelectCancelButton.UseVisualStyleBackColor = false;
+            this.SelectCancelButton.Click += new System.EventHandler(this.SelectCancelButton_Click);
             // 
             // SelectForm
             // 

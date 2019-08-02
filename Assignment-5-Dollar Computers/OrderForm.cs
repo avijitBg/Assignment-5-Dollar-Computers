@@ -10,27 +10,27 @@ using System.Windows.Forms;
 
 namespace Assignment_5_Dollar_Computers
 {
-    public partial class SelectForm : Form
+    public partial class OrderForm : Form
     {
-        public SelectForm()
+        public OrderForm()
         {
             InitializeComponent();
         }
 
-        private void SelectForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void SelectCancelButton_Click(object sender, EventArgs e)
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void SelectNextButton_Click(object sender, EventArgs e)
+        private void BackButton_Click(object sender, EventArgs e)
         {
             this.Hide();
             Program.productInfoForm.Show();
+        }
+
+        private void CancelButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
