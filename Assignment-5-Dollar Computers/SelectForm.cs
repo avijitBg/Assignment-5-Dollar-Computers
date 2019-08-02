@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Assignment_5_Dollar_Computers
 {
-    public partial class Form1 : Form
+    public partial class SelectForm : Form
     {
-        public Form1()
+        public SelectForm()
         {
             InitializeComponent();
+        }
+
+        private void SelectForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
