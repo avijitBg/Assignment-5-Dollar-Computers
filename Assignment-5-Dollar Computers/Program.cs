@@ -6,8 +6,8 @@ using System.Windows.Forms;
 /*Assignment-5: Dollar Computers
  * Author: Avijit Bagchi
  * ID# 301007115
- * Version: 1.2 SplashForm created
- * Last Modified: August 2, 2019
+ * Version: 1.3 ProductInfoForm created
+ * Last Modified: August 3, 2019
  */
 namespace Assignment_5_Dollar_Computers
 {
@@ -27,7 +27,7 @@ namespace Assignment_5_Dollar_Computers
             splashForm = new SplashForm();
             startForm = new StartForm();
             selectForm = new SelectForm();
-            Application.Run(new StartForm());
+            Application.Run(new ProductInfoForm());
         }
     }
 }

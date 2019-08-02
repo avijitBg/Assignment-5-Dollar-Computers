@@ -47,43 +47,47 @@
             // 
             // NewOrderButton
             // 
+            this.NewOrderButton.BackColor = System.Drawing.Color.DarkGreen;
             this.NewOrderButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NewOrderButton.ForeColor = System.Drawing.Color.Chocolate;
+            this.NewOrderButton.ForeColor = System.Drawing.Color.White;
             this.NewOrderButton.Location = new System.Drawing.Point(181, 295);
             this.NewOrderButton.Name = "NewOrderButton";
-            this.NewOrderButton.Size = new System.Drawing.Size(209, 35);
+            this.NewOrderButton.Size = new System.Drawing.Size(209, 40);
             this.NewOrderButton.TabIndex = 1;
             this.NewOrderButton.Text = "Start a New Order";
-            this.NewOrderButton.UseVisualStyleBackColor = true;
+            this.NewOrderButton.UseVisualStyleBackColor = false;
             this.NewOrderButton.Click += new System.EventHandler(this.NewOrderButton_Click);
             // 
             // SavedOrderButton
             // 
+            this.SavedOrderButton.BackColor = System.Drawing.Color.DarkGreen;
             this.SavedOrderButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SavedOrderButton.ForeColor = System.Drawing.Color.Chocolate;
-            this.SavedOrderButton.Location = new System.Drawing.Point(148, 336);
+            this.SavedOrderButton.ForeColor = System.Drawing.Color.White;
+            this.SavedOrderButton.Location = new System.Drawing.Point(149, 341);
             this.SavedOrderButton.Name = "SavedOrderButton";
-            this.SavedOrderButton.Size = new System.Drawing.Size(280, 39);
+            this.SavedOrderButton.Size = new System.Drawing.Size(280, 40);
             this.SavedOrderButton.TabIndex = 2;
             this.SavedOrderButton.Text = "Complete a Saved Order";
-            this.SavedOrderButton.UseVisualStyleBackColor = true;
+            this.SavedOrderButton.UseVisualStyleBackColor = false;
             // 
             // ExitButton
             // 
+            this.ExitButton.BackColor = System.Drawing.Color.DarkGreen;
             this.ExitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ExitButton.ForeColor = System.Drawing.Color.Chocolate;
-            this.ExitButton.Location = new System.Drawing.Point(236, 381);
+            this.ExitButton.ForeColor = System.Drawing.Color.White;
+            this.ExitButton.Location = new System.Drawing.Point(236, 389);
             this.ExitButton.Name = "ExitButton";
-            this.ExitButton.Size = new System.Drawing.Size(94, 32);
+            this.ExitButton.Size = new System.Drawing.Size(94, 40);
             this.ExitButton.TabIndex = 3;
             this.ExitButton.Text = "Exit";
-            this.ExitButton.UseVisualStyleBackColor = true;
+            this.ExitButton.UseVisualStyleBackColor = false;
             this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
             // StartForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(584, 441);
             this.ControlBox = false;
             this.Controls.Add(this.ExitButton);

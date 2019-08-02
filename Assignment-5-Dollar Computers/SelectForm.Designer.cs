@@ -52,7 +52,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(13, 59);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(775, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(775, 315);
             this.dataGridView1.TabIndex = 1;
             // 
             // YourSelectionLabel
@@ -76,27 +76,32 @@
             // 
             // SelectNextButton
             // 
+            this.SelectNextButton.BackColor = System.Drawing.Color.DarkGreen;
             this.SelectNextButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SelectNextButton.Location = new System.Drawing.Point(596, 408);
+            this.SelectNextButton.ForeColor = System.Drawing.Color.White;
+            this.SelectNextButton.Location = new System.Drawing.Point(572, 398);
             this.SelectNextButton.Name = "SelectNextButton";
-            this.SelectNextButton.Size = new System.Drawing.Size(75, 30);
+            this.SelectNextButton.Size = new System.Drawing.Size(100, 40);
             this.SelectNextButton.TabIndex = 4;
             this.SelectNextButton.Text = "Next";
-            this.SelectNextButton.UseVisualStyleBackColor = true;
+            this.SelectNextButton.UseVisualStyleBackColor = false;
             // 
             // SelectCancelButton
             // 
+            this.SelectCancelButton.BackColor = System.Drawing.Color.DarkGreen;
             this.SelectCancelButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SelectCancelButton.Location = new System.Drawing.Point(713, 408);
+            this.SelectCancelButton.ForeColor = System.Drawing.Color.White;
+            this.SelectCancelButton.Location = new System.Drawing.Point(689, 398);
             this.SelectCancelButton.Name = "SelectCancelButton";
-            this.SelectCancelButton.Size = new System.Drawing.Size(75, 30);
+            this.SelectCancelButton.Size = new System.Drawing.Size(100, 40);
             this.SelectCancelButton.TabIndex = 5;
             this.SelectCancelButton.Text = "Cancel";
-            this.SelectCancelButton.UseVisualStyleBackColor = true;
+            this.SelectCancelButton.UseVisualStyleBackColor = false;
             // 
             // SelectForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.ControlBox = false;
             this.Controls.Add(this.SelectCancelButton);
