@@ -8,7 +8,7 @@ using System.Windows.Forms;
 /*Assignment-5: Dollar Computers
  * Author: Avijit Bagchi
  * ID# 301007115
- * Version: 2.1 Data Container class created
+ * Version: 2.2 SelectionTextBox functionality created
  * Last Modified: August 3, 2019
  */
 namespace Assignment_5_Dollar_Computers.View

@@ -32,7 +32,7 @@
             this.HeadingLabel = new System.Windows.Forms.Label();
             this.ProductDataGridView = new System.Windows.Forms.DataGridView();
             this.YourSelectionLabel = new System.Windows.Forms.Label();
-            this.YourSelectionTextBox = new System.Windows.Forms.TextBox();
+            this.SelectionTextBox = new System.Windows.Forms.TextBox();
             this.NextButton = new System.Windows.Forms.Button();
             this.SelectCancelButton = new System.Windows.Forms.Button();
             this.productIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -143,14 +143,14 @@
             this.YourSelectionLabel.TabIndex = 2;
             this.YourSelectionLabel.Text = "Your Selection:";
             // 
-            // YourSelectionTextBox
+            // SelectionTextBox
             // 
-            this.YourSelectionTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.YourSelectionTextBox.Location = new System.Drawing.Point(211, 408);
-            this.YourSelectionTextBox.Name = "YourSelectionTextBox";
-            this.YourSelectionTextBox.ReadOnly = true;
-            this.YourSelectionTextBox.Size = new System.Drawing.Size(340, 30);
-            this.YourSelectionTextBox.TabIndex = 3;
+            this.SelectionTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SelectionTextBox.Location = new System.Drawing.Point(211, 408);
+            this.SelectionTextBox.Name = "SelectionTextBox";
+            this.SelectionTextBox.ReadOnly = true;
+            this.SelectionTextBox.Size = new System.Drawing.Size(340, 30);
+            this.SelectionTextBox.TabIndex = 3;
             // 
             // NextButton
             // 
@@ -439,7 +439,7 @@
             this.ControlBox = false;
             this.Controls.Add(this.SelectCancelButton);
             this.Controls.Add(this.NextButton);
-            this.Controls.Add(this.YourSelectionTextBox);
+            this.Controls.Add(this.SelectionTextBox);
             this.Controls.Add(this.YourSelectionLabel);
             this.Controls.Add(this.ProductDataGridView);
             this.Controls.Add(this.HeadingLabel);
@@ -460,7 +460,7 @@
 
         private System.Windows.Forms.Label HeadingLabel;
         private System.Windows.Forms.Label YourSelectionLabel;
-        private System.Windows.Forms.TextBox YourSelectionTextBox;
+        private System.Windows.Forms.TextBox SelectionTextBox;
         private System.Windows.Forms.Button NextButton;
         private System.Windows.Forms.Button SelectCancelButton;
         private System.Windows.Forms.DataGridViewTextBoxColumn productsDataGridViewTextBoxColumn;
