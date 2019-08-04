@@ -8,8 +8,8 @@ using System.Windows.Forms;
 /*Assignment-5: Dollar Computers
  * Author: Avijit Bagchi
  * ID# 301007115
- * Version: 2.0 Data Gridview connected to localdb server
- * Last Modified: August 2, 2019
+ * Version: 2.1 Data Container class created
+ * Last Modified: August 3, 2019
  */
 namespace Assignment_5_Dollar_Computers.View
 {
@@ -25,6 +25,7 @@ namespace Assignment_5_Dollar_Computers.View
         public static OrderForm orderForm;
         private static AboutBox aboutBox;
         public static Product products;
+        public static ProductDetails productDetails;
 
         internal static AboutBox AboutBox { get => aboutBox; set => aboutBox = value; }
 
@@ -42,6 +43,7 @@ namespace Assignment_5_Dollar_Computers.View
             orderForm = new OrderForm();
             AboutBox = new AboutBox();
             products = new Product();
+            productDetails = new ProductDetails();
             Application.Run(new SplashForm());
         }
     }

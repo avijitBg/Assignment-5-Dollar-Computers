@@ -25,18 +25,34 @@ namespace Assignment_5_Dollar_Computers.View
             {
                 db.products.Load();
                 productBindingSource.DataSource = db.products.Local.ToBindingList();
+                NextButton.Enabled = false;
             }
         }
 
-        private void SelectCancelButton_Click(object sender, EventArgs e)
+        private void CancelButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void SelectNextButton_Click(object sender, EventArgs e)
+        private void NextButton_Click(object sender, EventArgs e)
         {
             this.Hide();
             Program.productInfoForm.Show();
+        }
+
+        private void ProductDataGridView_SelectionChanged(object sender, EventArgs e)
+        {
+            NextButton.Enabled = true;
+            var rowIndex = ProductDataGridView.CurrentCell.RowIndex;
+            var rows = ProductDataGridView.Rows;
+            var columnCount = ProductDataGridView.ColumnCount;
+            var cells = rows[rowIndex].Cells;
+            //rows[rowIndex].Selected = true;
+            string outputString = string.Empty;
+            for (int index = 0; index < columnCount; index++)
+            {
+                outputString += cells[index].Value.ToString() + " ";
+            }
         }
     }
 }
