@@ -37,14 +37,6 @@
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.undoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.redoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.cutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.copyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pasteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.selectAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ProductGroupBox = new System.Windows.Forms.GroupBox();
             this.PriceTextBox = new System.Windows.Forms.TextBox();
             this.ConditionTextBox = new System.Windows.Forms.TextBox();
@@ -68,10 +60,10 @@
             this.CPUTypeTextBox = new System.Windows.Forms.TextBox();
             this.WebcamLabel = new System.Windows.Forms.Label();
             this.CPUTypeLabel = new System.Windows.Forms.Label();
-            this.NumberTextBox = new System.Windows.Forms.TextBox();
+            this.CPUNumberTextBox = new System.Windows.Forms.TextBox();
             this.NumberLabel = new System.Windows.Forms.Label();
             this.GPUTypeTextBox = new System.Windows.Forms.TextBox();
-            this.BrandTextBox = new System.Windows.Forms.TextBox();
+            this.CPUBrandTextBox = new System.Windows.Forms.TextBox();
             this.GPUTypeLabel = new System.Windows.Forms.Label();
             this.BrandLabel = new System.Windows.Forms.Label();
             this.ScreenTextBox = new System.Windows.Forms.TextBox();
@@ -84,10 +76,18 @@
             this.SelectAnotherButton = new System.Windows.Forms.Button();
             this.CancelButton = new System.Windows.Forms.Button();
             this.NextButton = new System.Windows.Forms.Button();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.openToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.saveToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.ProductInfoOpenFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.ProductInfoSaveFileDialog = new System.Windows.Forms.SaveFileDialog();
+            this.selectAnotherProductToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ProductInfoMenuStrip.SuspendLayout();
             this.ProductGroupBox.SuspendLayout();
             this.InfoGroupBox.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // ProductInfoMenuStrip
@@ -119,13 +119,14 @@
             this.openToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
             this.openToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.openToolStripMenuItem.Text = "&Open";
+            this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
             // toolStripSeparator
             // 
             this.toolStripSeparator.Name = "toolStripSeparator";
-            this.toolStripSeparator.Size = new System.Drawing.Size(143, 6);
+            this.toolStripSeparator.Size = new System.Drawing.Size(177, 6);
             // 
             // saveToolStripMenuItem
             // 
@@ -133,92 +134,29 @@
             this.saveToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
             this.saveToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.saveToolStripMenuItem.Text = "&Save";
+            this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripButton_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(143, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(177, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exitToolStripMenuItem.Text = "E&xit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.CancelButton_Click);
             // 
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.undoToolStripMenuItem,
-            this.redoToolStripMenuItem,
-            this.toolStripSeparator3,
-            this.cutToolStripMenuItem,
-            this.copyToolStripMenuItem,
-            this.pasteToolStripMenuItem,
-            this.toolStripSeparator4,
-            this.selectAllToolStripMenuItem});
+            this.selectAnotherProductToolStripMenuItem});
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
             this.editToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
             this.editToolStripMenuItem.Text = "&Edit";
-            // 
-            // undoToolStripMenuItem
-            // 
-            this.undoToolStripMenuItem.Name = "undoToolStripMenuItem";
-            this.undoToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Z)));
-            this.undoToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
-            this.undoToolStripMenuItem.Text = "&Undo";
-            // 
-            // redoToolStripMenuItem
-            // 
-            this.redoToolStripMenuItem.Name = "redoToolStripMenuItem";
-            this.redoToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Y)));
-            this.redoToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
-            this.redoToolStripMenuItem.Text = "&Redo";
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(141, 6);
-            // 
-            // cutToolStripMenuItem
-            // 
-            this.cutToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("cutToolStripMenuItem.Image")));
-            this.cutToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.cutToolStripMenuItem.Name = "cutToolStripMenuItem";
-            this.cutToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
-            this.cutToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
-            this.cutToolStripMenuItem.Text = "Cu&t";
-            // 
-            // copyToolStripMenuItem
-            // 
-            this.copyToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("copyToolStripMenuItem.Image")));
-            this.copyToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.copyToolStripMenuItem.Name = "copyToolStripMenuItem";
-            this.copyToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
-            this.copyToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
-            this.copyToolStripMenuItem.Text = "&Copy";
-            // 
-            // pasteToolStripMenuItem
-            // 
-            this.pasteToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("pasteToolStripMenuItem.Image")));
-            this.pasteToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.pasteToolStripMenuItem.Name = "pasteToolStripMenuItem";
-            this.pasteToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.V)));
-            this.pasteToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
-            this.pasteToolStripMenuItem.Text = "&Paste";
-            // 
-            // toolStripSeparator4
-            // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(141, 6);
-            // 
-            // selectAllToolStripMenuItem
-            // 
-            this.selectAllToolStripMenuItem.Name = "selectAllToolStripMenuItem";
-            this.selectAllToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
-            this.selectAllToolStripMenuItem.Text = "Select &All";
             // 
             // ProductGroupBox
             // 
@@ -229,7 +167,7 @@
             this.ProductGroupBox.Controls.Add(this.ConditionLabel);
             this.ProductGroupBox.Controls.Add(this.ProductIdLabel);
             this.ProductGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ProductGroupBox.Location = new System.Drawing.Point(12, 24);
+            this.ProductGroupBox.Location = new System.Drawing.Point(5, 58);
             this.ProductGroupBox.Margin = new System.Windows.Forms.Padding(0);
             this.ProductGroupBox.Name = "ProductGroupBox";
             this.ProductGroupBox.Size = new System.Drawing.Size(779, 56);
@@ -238,6 +176,7 @@
             // 
             // PriceTextBox
             // 
+            this.PriceTextBox.Enabled = false;
             this.PriceTextBox.Location = new System.Drawing.Point(531, 13);
             this.PriceTextBox.Name = "PriceTextBox";
             this.PriceTextBox.ReadOnly = true;
@@ -246,6 +185,7 @@
             // 
             // ConditionTextBox
             // 
+            this.ConditionTextBox.Enabled = false;
             this.ConditionTextBox.Location = new System.Drawing.Point(341, 17);
             this.ConditionTextBox.Name = "ConditionTextBox";
             this.ConditionTextBox.ReadOnly = true;
@@ -254,6 +194,7 @@
             // 
             // ProductIdTextBox
             // 
+            this.ProductIdTextBox.Enabled = false;
             this.ProductIdTextBox.Location = new System.Drawing.Point(124, 17);
             this.ProductIdTextBox.Name = "ProductIdTextBox";
             this.ProductIdTextBox.ReadOnly = true;
@@ -301,7 +242,7 @@
             this.InfoGroupBox.Controls.Add(this.OSLabel);
             this.InfoGroupBox.Controls.Add(this.PlatformLabel);
             this.InfoGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InfoGroupBox.Location = new System.Drawing.Point(12, 91);
+            this.InfoGroupBox.Location = new System.Drawing.Point(5, 125);
             this.InfoGroupBox.Margin = new System.Windows.Forms.Padding(0);
             this.InfoGroupBox.Name = "InfoGroupBox";
             this.InfoGroupBox.Size = new System.Drawing.Size(779, 97);
@@ -311,6 +252,7 @@
             // 
             // ManufacturerTextBox
             // 
+            this.ManufacturerTextBox.Enabled = false;
             this.ManufacturerTextBox.Location = new System.Drawing.Point(124, 53);
             this.ManufacturerTextBox.Name = "ManufacturerTextBox";
             this.ManufacturerTextBox.ReadOnly = true;
@@ -319,6 +261,7 @@
             // 
             // ModelTextBox
             // 
+            this.ModelTextBox.Enabled = false;
             this.ModelTextBox.Location = new System.Drawing.Point(341, 56);
             this.ModelTextBox.Name = "ModelTextBox";
             this.ModelTextBox.ReadOnly = true;
@@ -347,6 +290,7 @@
             // 
             // OSTextBox
             // 
+            this.OSTextBox.Enabled = false;
             this.OSTextBox.Location = new System.Drawing.Point(341, 16);
             this.OSTextBox.Name = "OSTextBox";
             this.OSTextBox.ReadOnly = true;
@@ -355,6 +299,7 @@
             // 
             // PlatformTextBox
             // 
+            this.PlatformTextBox.Enabled = false;
             this.PlatformTextBox.Location = new System.Drawing.Point(124, 19);
             this.PlatformTextBox.Name = "PlatformTextBox";
             this.PlatformTextBox.ReadOnly = true;
@@ -389,10 +334,10 @@
             this.groupBox1.Controls.Add(this.CPUTypeTextBox);
             this.groupBox1.Controls.Add(this.WebcamLabel);
             this.groupBox1.Controls.Add(this.CPUTypeLabel);
-            this.groupBox1.Controls.Add(this.NumberTextBox);
+            this.groupBox1.Controls.Add(this.CPUNumberTextBox);
             this.groupBox1.Controls.Add(this.NumberLabel);
             this.groupBox1.Controls.Add(this.GPUTypeTextBox);
-            this.groupBox1.Controls.Add(this.BrandTextBox);
+            this.groupBox1.Controls.Add(this.CPUBrandTextBox);
             this.groupBox1.Controls.Add(this.GPUTypeLabel);
             this.groupBox1.Controls.Add(this.BrandLabel);
             this.groupBox1.Controls.Add(this.ScreenTextBox);
@@ -402,7 +347,7 @@
             this.groupBox1.Controls.Add(this.HDDLabel);
             this.groupBox1.Controls.Add(this.MemoryLabel);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(12, 207);
+            this.groupBox1.Location = new System.Drawing.Point(5, 241);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(0);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(779, 130);
@@ -412,6 +357,7 @@
             // 
             // CPUSpeedTextBox
             // 
+            this.CPUSpeedTextBox.Enabled = false;
             this.CPUSpeedTextBox.Location = new System.Drawing.Point(341, 98);
             this.CPUSpeedTextBox.Name = "CPUSpeedTextBox";
             this.CPUSpeedTextBox.ReadOnly = true;
@@ -430,6 +376,7 @@
             // 
             // WebcamTextBox
             // 
+            this.WebcamTextBox.Enabled = false;
             this.WebcamTextBox.Location = new System.Drawing.Point(544, 98);
             this.WebcamTextBox.Name = "WebcamTextBox";
             this.WebcamTextBox.ReadOnly = true;
@@ -438,6 +385,7 @@
             // 
             // CPUTypeTextBox
             // 
+            this.CPUTypeTextBox.Enabled = false;
             this.CPUTypeTextBox.Location = new System.Drawing.Point(124, 101);
             this.CPUTypeTextBox.Name = "CPUTypeTextBox";
             this.CPUTypeTextBox.ReadOnly = true;
@@ -464,13 +412,14 @@
             this.CPUTypeLabel.TabIndex = 18;
             this.CPUTypeLabel.Text = "CPU Type";
             // 
-            // NumberTextBox
+            // CPUNumberTextBox
             // 
-            this.NumberTextBox.Location = new System.Drawing.Point(341, 55);
-            this.NumberTextBox.Name = "NumberTextBox";
-            this.NumberTextBox.ReadOnly = true;
-            this.NumberTextBox.Size = new System.Drawing.Size(100, 23);
-            this.NumberTextBox.TabIndex = 17;
+            this.CPUNumberTextBox.Enabled = false;
+            this.CPUNumberTextBox.Location = new System.Drawing.Point(341, 55);
+            this.CPUNumberTextBox.Name = "CPUNumberTextBox";
+            this.CPUNumberTextBox.ReadOnly = true;
+            this.CPUNumberTextBox.Size = new System.Drawing.Size(100, 23);
+            this.CPUNumberTextBox.TabIndex = 17;
             // 
             // NumberLabel
             // 
@@ -485,19 +434,21 @@
             // 
             // GPUTypeTextBox
             // 
+            this.GPUTypeTextBox.Enabled = false;
             this.GPUTypeTextBox.Location = new System.Drawing.Point(544, 55);
             this.GPUTypeTextBox.Name = "GPUTypeTextBox";
             this.GPUTypeTextBox.ReadOnly = true;
             this.GPUTypeTextBox.Size = new System.Drawing.Size(206, 23);
             this.GPUTypeTextBox.TabIndex = 15;
             // 
-            // BrandTextBox
+            // CPUBrandTextBox
             // 
-            this.BrandTextBox.Location = new System.Drawing.Point(124, 58);
-            this.BrandTextBox.Name = "BrandTextBox";
-            this.BrandTextBox.ReadOnly = true;
-            this.BrandTextBox.Size = new System.Drawing.Size(100, 23);
-            this.BrandTextBox.TabIndex = 14;
+            this.CPUBrandTextBox.Enabled = false;
+            this.CPUBrandTextBox.Location = new System.Drawing.Point(124, 58);
+            this.CPUBrandTextBox.Name = "CPUBrandTextBox";
+            this.CPUBrandTextBox.ReadOnly = true;
+            this.CPUBrandTextBox.Size = new System.Drawing.Size(100, 23);
+            this.CPUBrandTextBox.TabIndex = 14;
             // 
             // GPUTypeLabel
             // 
@@ -521,6 +472,7 @@
             // 
             // ScreenTextBox
             // 
+            this.ScreenTextBox.Enabled = false;
             this.ScreenTextBox.Location = new System.Drawing.Point(341, 16);
             this.ScreenTextBox.Name = "ScreenTextBox";
             this.ScreenTextBox.ReadOnly = true;
@@ -539,6 +491,7 @@
             // 
             // HDDTextBox
             // 
+            this.HDDTextBox.Enabled = false;
             this.HDDTextBox.Location = new System.Drawing.Point(544, 16);
             this.HDDTextBox.Name = "HDDTextBox";
             this.HDDTextBox.ReadOnly = true;
@@ -547,6 +500,7 @@
             // 
             // MemoryTextBox
             // 
+            this.MemoryTextBox.Enabled = false;
             this.MemoryTextBox.Location = new System.Drawing.Point(124, 19);
             this.MemoryTextBox.Name = "MemoryTextBox";
             this.MemoryTextBox.ReadOnly = true;
@@ -623,12 +577,62 @@
             this.NextButton.UseVisualStyleBackColor = false;
             this.NextButton.Click += new System.EventHandler(this.NextButton_Click);
             // 
+            // toolStrip1
+            // 
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.openToolStripButton,
+            this.saveToolStripButton,
+            this.toolStripSeparator1});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 24);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(784, 25);
+            this.toolStrip1.TabIndex = 8;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // openToolStripButton
+            // 
+            this.openToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.openToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("openToolStripButton.Image")));
+            this.openToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.openToolStripButton.Name = "openToolStripButton";
+            this.openToolStripButton.Size = new System.Drawing.Size(23, 22);
+            this.openToolStripButton.Text = "&Open";
+            this.openToolStripButton.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
+            // 
+            // saveToolStripButton
+            // 
+            this.saveToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.saveToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("saveToolStripButton.Image")));
+            this.saveToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.saveToolStripButton.Name = "saveToolStripButton";
+            this.saveToolStripButton.Size = new System.Drawing.Size(23, 22);
+            this.saveToolStripButton.Text = "&Save";
+            this.saveToolStripButton.Click += new System.EventHandler(this.saveToolStripButton_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
+            // ProductInfoOpenFileDialog
+            // 
+            this.ProductInfoOpenFileDialog.FileName = "openFileDialog1";
+            // 
+            // selectAnotherProductToolStripMenuItem
+            // 
+            this.selectAnotherProductToolStripMenuItem.Name = "selectAnotherProductToolStripMenuItem";
+            this.selectAnotherProductToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.L)));
+            this.selectAnotherProductToolStripMenuItem.Size = new System.Drawing.Size(236, 22);
+            this.selectAnotherProductToolStripMenuItem.Text = "Se&lect Another Product";
+            this.selectAnotherProductToolStripMenuItem.Click += new System.EventHandler(this.SelectAnotherButton_Click);
+            // 
             // ProductInfoForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(784, 441);
             this.ControlBox = false;
+            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.NextButton);
             this.Controls.Add(this.CancelButton);
             this.Controls.Add(this.SelectAnotherButton);
@@ -652,6 +656,8 @@
             this.InfoGroupBox.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -667,14 +673,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem undoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem redoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-        private System.Windows.Forms.ToolStripMenuItem cutToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem copyToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem pasteToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
-        private System.Windows.Forms.ToolStripMenuItem selectAllToolStripMenuItem;
         private System.Windows.Forms.GroupBox ProductGroupBox;
         private System.Windows.Forms.Label PriceLabel;
         private System.Windows.Forms.Label ConditionLabel;
@@ -698,10 +696,10 @@
         private System.Windows.Forms.TextBox CPUTypeTextBox;
         private System.Windows.Forms.Label WebcamLabel;
         private System.Windows.Forms.Label CPUTypeLabel;
-        private System.Windows.Forms.TextBox NumberTextBox;
+        private System.Windows.Forms.TextBox CPUNumberTextBox;
         private System.Windows.Forms.Label NumberLabel;
         private System.Windows.Forms.TextBox GPUTypeTextBox;
-        private System.Windows.Forms.TextBox BrandTextBox;
+        private System.Windows.Forms.TextBox CPUBrandTextBox;
         private System.Windows.Forms.Label GPUTypeLabel;
         private System.Windows.Forms.Label BrandLabel;
         private System.Windows.Forms.TextBox ScreenTextBox;
@@ -714,5 +712,12 @@
         private System.Windows.Forms.Button SelectAnotherButton;
         private System.Windows.Forms.Button CancelButton;
         private System.Windows.Forms.Button NextButton;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton openToolStripButton;
+        private System.Windows.Forms.ToolStripButton saveToolStripButton;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.OpenFileDialog ProductInfoOpenFileDialog;
+        private System.Windows.Forms.SaveFileDialog ProductInfoSaveFileDialog;
+        private System.Windows.Forms.ToolStripMenuItem selectAnotherProductToolStripMenuItem;
     }
 }

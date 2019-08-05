@@ -32,5 +32,11 @@ namespace Assignment_5_Dollar_Computers.View
             this.Hide();
             Program.selectForm.Show();
         }
+
+        private void SavedOrderButton_Click(object sender, EventArgs e)
+        {
+            Program.orderForm.Show();
+            this.Hide();
+        }
     }
 }

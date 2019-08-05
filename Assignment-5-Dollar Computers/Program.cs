@@ -8,8 +8,8 @@ using System.Windows.Forms;
 /*Assignment-5: Dollar Computers
  * Author: Avijit Bagchi
  * ID# 301007115
- * Version: 2.2 SelectionTextBox functionality created
- * Last Modified: August 3, 2019
+ * Version: 2.3 File dialogue boxes added
+ * Last Modified: August 5, 2019
  */
 namespace Assignment_5_Dollar_Computers.View
 {

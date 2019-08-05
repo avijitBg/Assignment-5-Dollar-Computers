@@ -69,6 +69,7 @@
             this.SavedOrderButton.TabIndex = 2;
             this.SavedOrderButton.Text = "Complete a Saved Order";
             this.SavedOrderButton.UseVisualStyleBackColor = false;
+            this.SavedOrderButton.Click += new System.EventHandler(this.SavedOrderButton_Click);
             // 
             // ExitButton
             // 
