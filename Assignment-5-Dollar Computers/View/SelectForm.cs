@@ -36,6 +36,7 @@ namespace Assignment_5_Dollar_Computers.View
 
         private void NextButton_Click(object sender, EventArgs e)
         {
+            //MessageBox.Show("Confirm your selection!");
             this.Hide();
             Program.productInfoForm.Show();
         }
@@ -87,7 +88,7 @@ namespace Assignment_5_Dollar_Computers.View
             string manufacturer = Program.productDetails.Manufacturer.ToString();
             string model = Program.productDetails.Model.ToString();
             double cost = Program.productDetails.Cost;
-            SelectionTextBox.Text = ($"{manufacturer}, {model}, Price: {cost:C2}");
+            SelectionTextBox.Text = ($"{manufacturer}, {model}, Price: {cost:C2}"); 
         }
 
     }

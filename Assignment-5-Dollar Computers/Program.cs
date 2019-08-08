@@ -8,7 +8,7 @@ using System.Windows.Forms;
 /*Assignment-5: Dollar Computers
  * Author: Avijit Bagchi
  * ID# 301007115
- * Version: 2.3 File dialogue boxes added
+ * Version: 2.4 OrderForm functionalities added
  * Last Modified: August 5, 2019
  */
 namespace Assignment_5_Dollar_Computers.View
@@ -44,7 +44,7 @@ namespace Assignment_5_Dollar_Computers.View
             AboutBox = new AboutBox();
             products = new Product();
             productDetails = new ProductDetails();
-            Application.Run(new SplashForm());
+            Application.Run(splashForm);
         }
     }
 }

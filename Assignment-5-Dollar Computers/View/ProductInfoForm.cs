@@ -41,31 +41,12 @@ namespace Assignment_5_Dollar_Computers.View
             Program.orderForm.Show();
         }
 
-        private void ProductInfoForm_Load(object sender, EventArgs e)
-        {
-            ProductIdTextBox.Text = Program.productDetails.ProductionId.ToString();
-            ConditionTextBox.Text = Program.productDetails.Condition;
-            PriceTextBox.Text = ($"{Program.productDetails.Cost:C2}");
-            PlatformTextBox.Text = Program.productDetails.Platform;
-            OSTextBox.Text = Program.productDetails.OS;
-            ManufacturerTextBox.Text = Program.productDetails.Manufacturer;
-            ModelTextBox.Text = Program.productDetails.Model;
-            MemoryTextBox.Text = Program.productDetails.HDDSize;
-            ScreenTextBox.Text = Program.productDetails.LCDSize;
-            HDDTextBox.Text = Program.productDetails.RamSize;
-            CPUBrandTextBox.Text = Program.productDetails.CPUBrand;
-            CPUNumberTextBox.Text = Program.productDetails.CPUNumber;
-            GPUTypeTextBox.Text = Program.productDetails.GPUType;
-            CPUTypeTextBox.Text = Program.productDetails.CPUType;
-            CPUSpeedTextBox.Text = Program.productDetails.CPUSpeed;
-            WebcamTextBox.Text = Program.productDetails.WebCam;
-        }
 
         private void saveToolStripButton_Click(object sender, EventArgs e)
         {
-            ProductInfoSaveFileDialog.FileName = "Product.dat";
+            ProductInfoSaveFileDialog.FileName = "Product.txt";
             ProductInfoSaveFileDialog.InitialDirectory = Directory.GetCurrentDirectory();
-            ProductInfoSaveFileDialog.Filter = "Dat Files(*.dat)|*.dat| All Files (*.*)|*.*";
+            ProductInfoSaveFileDialog.Filter = "Text Files(*.txt)|*.txt| All Files (*.*)|*.*";
 
             var result = ProductInfoSaveFileDialog.ShowDialog();
             if (result != DialogResult.Cancel)
@@ -74,8 +55,8 @@ namespace Assignment_5_Dollar_Computers.View
                 {
                     using (BinaryWriter outputString = new BinaryWriter(File.Open(ProductInfoSaveFileDialog.FileName, FileMode.Create)))
                     {
-                        outputString.Write(Program.productDetails.ProductionId);
-                        outputString.Write(Program.productDetails.Cost);
+                        outputString.Write(Program.productDetails.ProductionId.ToString());
+                        outputString.Write(Program.productDetails.Cost.ToString());
                         outputString.Write(Program.productDetails.Manufacturer);
                         outputString.Write(Program.productDetails.Model);
                         outputString.Write(Program.productDetails.RamType);
@@ -105,6 +86,7 @@ namespace Assignment_5_Dollar_Computers.View
                         outputString.Write(Program.productDetails.Power);
                         outputString.Write(Program.productDetails.WebCam);
 
+                        outputString.Flush();
                         outputString.Close();
                         outputString.Dispose();
 
@@ -120,16 +102,16 @@ namespace Assignment_5_Dollar_Computers.View
 
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ProductInfoOpenFileDialog.FileName = "Product.dat";
+            ProductInfoOpenFileDialog.FileName = "Product.txt";
             ProductInfoOpenFileDialog.InitialDirectory = Directory.GetCurrentDirectory();
-            ProductInfoOpenFileDialog.Filter = "Dat Files(*.dat)|*.dat| All Files (*.*)|*.*";
+            ProductInfoOpenFileDialog.Filter = "Text Files(*.txt)|*.txt| All Files (*.*)|*.*";
 
             var result = ProductInfoOpenFileDialog.ShowDialog();
             if (result != DialogResult.Cancel)
             {
                 try
                 {
-                    using (BinaryReader inputString = new BinaryReader(File.Open("Product.dat", FileMode.Open)))
+                    using (BinaryReader inputString = new BinaryReader(File.Open(ProductInfoOpenFileDialog.FileName, FileMode.Open)))
                     {
                         Program.productDetails.ProductionId = int.Parse(inputString.ReadString());
                         Program.productDetails.Cost = double.Parse(inputString.ReadString());
@@ -161,6 +143,9 @@ namespace Assignment_5_Dollar_Computers.View
                         Program.productDetails.MouseType = inputString.ReadString();
                         Program.productDetails.Power = inputString.ReadString();
                         Program.productDetails.WebCam = inputString.ReadString();
+
+                        inputString.Close();
+                        inputString.Dispose();
                     }
                     NextButton_Click(sender, e);
                 }
@@ -169,6 +154,31 @@ namespace Assignment_5_Dollar_Computers.View
                     MessageBox.Show("ERROR" + exception.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }   
+        }
+
+        private void ProductInfoForm_Activated(object sender, EventArgs e)
+        {
+            ProductIdTextBox.Text = Program.productDetails.ProductionId.ToString();
+            ConditionTextBox.Text = Program.productDetails.Condition;
+            PriceTextBox.Text = ($"{Program.productDetails.Cost:C2}");
+            PlatformTextBox.Text = Program.productDetails.Platform;
+            OSTextBox.Text = Program.productDetails.OS;
+            ManufacturerTextBox.Text = Program.productDetails.Manufacturer;
+            ModelTextBox.Text = Program.productDetails.Model;
+            MemoryTextBox.Text = Program.productDetails.HDDSize;
+            ScreenTextBox.Text = Program.productDetails.LCDSize;
+            HDDTextBox.Text = Program.productDetails.RamSize;
+            CPUBrandTextBox.Text = Program.productDetails.CPUBrand;
+            CPUNumberTextBox.Text = Program.productDetails.CPUNumber;
+            GPUTypeTextBox.Text = Program.productDetails.GPUType;
+            CPUTypeTextBox.Text = Program.productDetails.CPUType;
+            CPUSpeedTextBox.Text = Program.productDetails.CPUSpeed;
+            WebcamTextBox.Text = Program.productDetails.WebCam;
+        }
+
+        private void ProductInfoForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

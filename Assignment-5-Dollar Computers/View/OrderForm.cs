@@ -54,118 +54,50 @@ namespace Assignment_5_Dollar_Computers.View
 
         private void OrderForm_Activated(object sender, EventArgs e)
         {
-            OrderOpenFileDialog.FileName = "Product.dat";
-            OrderOpenFileDialog.InitialDirectory = Directory.GetCurrentDirectory();
-            OrderOpenFileDialog.Filter = "Dat Files(*.dat)|*.dat| All Files (*.*)|*.*";
+            PlatformTextBox.Text = Program.productDetails.Platform;
+            ConditiontextBox.Text= Program.productDetails.Condition;
+            ModeltextBox.Text= Program.productDetails.Model;
+            ManufacturerTextBox.Text= Program.productDetails.Manufacturer;
 
-            var result = OrderOpenFileDialog.ShowDialog();
-            if (result != DialogResult.Cancel)
-            {
-                try
-                {
-                    using (BinaryReader inputString = new BinaryReader(File.Open("Product.dat", FileMode.Open)))
-                    {
-                        {
-                            Program.productDetails.ProductionId = int.Parse(inputString.ReadString());
-                            Program.productDetails.Cost = double.Parse(inputString.ReadString());
-                            Program.productDetails.Manufacturer = inputString.ReadString();
-                            Program.productDetails.Model = inputString.ReadString();
-                            Program.productDetails.RamType = inputString.ReadString();
-                            Program.productDetails.RamSize = inputString.ReadString();
-                            Program.productDetails.DisplayType = inputString.ReadString();
-                            Program.productDetails.LCDSize = inputString.ReadString();
-                            Program.productDetails.CPUClass = inputString.ReadString();
-                            Program.productDetails.CPUBrand = inputString.ReadString();
-                            Program.productDetails.CPUType = inputString.ReadString();
-                            Program.productDetails.CPUSpeed = inputString.ReadString();
-                            Program.productDetails.CPUNumber = inputString.ReadString();
-                            Program.productDetails.Condition = inputString.ReadString();
-                            Program.productDetails.OS = inputString.ReadString();
-                            Program.productDetails.Platform = inputString.ReadString();
-                            Program.productDetails.HDDSize = inputString.ReadString();
-                            Program.productDetails.HDDSpeed = inputString.ReadString();
-                            Program.productDetails.GPUType = inputString.ReadString();
-                            Program.productDetails.OpticalDrive = inputString.ReadString();
-                            Program.productDetails.AudioType = inputString.ReadString();
-                            Program.productDetails.LAN = inputString.ReadString();
-                            Program.productDetails.WIFI = inputString.ReadString();
-                            Program.productDetails.Width = inputString.ReadString();
-                            Program.productDetails.Height = inputString.ReadString();
-                            Program.productDetails.Depth = inputString.ReadString();
-                            Program.productDetails.Weight = inputString.ReadString();
-                            Program.productDetails.MouseType = inputString.ReadString();
-                            Program.productDetails.Power = inputString.ReadString();
-                            Program.productDetails.WebCam = inputString.ReadString();
+            ProductInfoTextBox.Text += Program.productDetails.LCDSize + "\r\n";
+            ProductInfoTextBox.Text += "\r\n";
+            ProductInfoTextBox.Text += Program.productDetails.RamSize + "\r\n";
+            ProductInfoTextBox.Text += "\r\n";
+            ProductInfoTextBox.Text += Program.productDetails.CPUBrand + "\r\n";
+            ProductInfoTextBox.Text += "\r\n";
+            ProductInfoTextBox.Text += Program.productDetails.CPUType + "\r\n";
+            ProductInfoTextBox.Text += "\r\n";
+            ProductInfoTextBox.Text += Program.productDetails.CPUNumber + "\r\n";
+            ProductInfoTextBox.Text += "\r\n";
+            ProductInfoTextBox.Text += Program.productDetails.CPUSpeed + "\r\n";
+            ProductInfoTextBox.Text += "\r\n";
+            ProductInfoTextBox.Text += Program.productDetails.HDDSize + "\r\n";
+            ProductInfoTextBox.Text += "\r\n";
+            ProductInfoTextBox.Text += Program.productDetails.GPUType + "\r\n";
+            ProductInfoTextBox.Text += "\r\n";
+            ProductInfoTextBox.Text += Program.productDetails.WebCam + "\r\n";
+            ProductInfoTextBox.Text += "\r\n";
+            ProductInfoTextBox.Text += Program.productDetails.OS + "\r\n";
 
-                            ConditiontextBox.Text = Program.productDetails.Condition;
-                            PlatformTextBox.Text = Program.productDetails.Platform;
-                            ManufacturerTextBox.Text = Program.productDetails.Manufacturer;
-                            ModeltextBox.Text = Program.productDetails.Model;
-                        }
-                    }
-                }
-                catch (IOException exception)
-                {
-                    MessageBox.Show("ERROR" + exception.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
+            double price= Program.productDetails.Cost;
+            double tax = Program.productDetails.Cost * .13;
+            double totalPrice = price + tax;
+            PriceTextBox.Text = ($"{price:C2}").ToString();
+            TaxTextBox.Text = ($"{tax:C2}").ToString();
+            TotalpriceTextBox.Text= ($"{totalPrice:C2}").ToString();
         }
 
-        private void saveToolStripButton_Click(object sender, EventArgs e)
+        private void FinishButton_Click(object sender, EventArgs e)
         {
-            OrderSaveFileDialog.FileName = "Product.dat";
-            OrderSaveFileDialog.InitialDirectory = Directory.GetCurrentDirectory();
-            OrderSaveFileDialog.Filter = "Dat Files(*.dat)|*.dat| All Files (*.*)|*.*";
-
-            var result = OrderSaveFileDialog.ShowDialog();
-            if (result != DialogResult.Cancel)
-            {
-                try
+            //DialogResult dialog = MessageBox.Show("Thanks for purchasing from Dollar Computers!\n\nYour order will be processed within 7-10 business days", MessageBoxButtons.OK);
+            DialogResult dialog = MessageBox.Show(this, "Thanks for purchasing from Dollar Computers!\n\nYour order will be processed within 7-10 business days",
+                                    "Order Submitted!!!",MessageBoxButtons.OK,
+                                   MessageBoxIcon.Information);
+            if (dialog == DialogResult.OK) ;
+                if (dialog == DialogResult.OK)
                 {
-                    using (BinaryWriter outputString = new BinaryWriter(File.Open(OrderSaveFileDialog.FileName, FileMode.Create)))
-                    {
-                        outputString.Write(Program.productDetails.ProductionId);
-                        outputString.Write(Program.productDetails.Cost);
-                        outputString.Write(Program.productDetails.Manufacturer);
-                        outputString.Write(Program.productDetails.Model);
-                        outputString.Write(Program.productDetails.RamType);
-                        outputString.Write(Program.productDetails.RamSize);
-                        outputString.Write(Program.productDetails.DisplayType);
-                        outputString.Write(Program.productDetails.LCDSize);
-                        outputString.Write(Program.productDetails.CPUClass);
-                        outputString.Write(Program.productDetails.CPUBrand);
-                        outputString.Write(Program.productDetails.CPUType);
-                        outputString.Write(Program.productDetails.CPUSpeed);
-                        outputString.Write(Program.productDetails.CPUNumber);
-                        outputString.Write(Program.productDetails.Condition);
-                        outputString.Write(Program.productDetails.OS);
-                        outputString.Write(Program.productDetails.Platform);
-                        outputString.Write(Program.productDetails.HDDSize);
-                        outputString.Write(Program.productDetails.HDDSpeed);
-                        outputString.Write(Program.productDetails.GPUType);
-                        outputString.Write(Program.productDetails.OpticalDrive);
-                        outputString.Write(Program.productDetails.LAN);
-                        outputString.Write(Program.productDetails.WIFI);
-                        outputString.Write(Program.productDetails.AudioType);
-                        outputString.Write(Program.productDetails.Width);
-                        outputString.Write(Program.productDetails.Height);
-                        outputString.Write(Program.productDetails.Depth);
-                        outputString.Write(Program.productDetails.Weight);
-                        outputString.Write(Program.productDetails.MouseType);
-                        outputString.Write(Program.productDetails.Power);
-                        outputString.Write(Program.productDetails.WebCam);
-
-                        outputString.Close();
-                        outputString.Dispose();
-
-                        MessageBox.Show("File saved...", "Saving file...", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
+                    Application.Exit();
                 }
-                catch (IOException exception)
-                {
-                    MessageBox.Show("ERROR" + exception.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
         }
     }
 }

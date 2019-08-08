@@ -35,7 +35,7 @@ namespace Assignment_5_Dollar_Computers.View
 
         private void SavedOrderButton_Click(object sender, EventArgs e)
         {
-            Program.orderForm.Show();
+            Program.productInfoForm.Show();
             this.Hide();
         }
     }
