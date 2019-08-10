@@ -8,8 +8,8 @@ using System.Windows.Forms;
 /*Assignment-5: Dollar Computers
  * Author: Avijit Bagchi
  * ID# 301007115
- * Version: 2.5 OrderForm picture control functionality added
- * Last Modified: August 9, 2019
+ * Version: 3.0 Unit testing project created
+ * Last Modified: August 10, 2019
  */
 namespace Assignment_5_Dollar_Computers.View
 {

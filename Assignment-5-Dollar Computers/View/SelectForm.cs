@@ -19,13 +19,26 @@ namespace Assignment_5_Dollar_Computers.View
             InitializeComponent();
         }
 
-        private void SelectForm_Load(object sender, EventArgs e)
+        public bool HasLoadedDataSource()
         {
             using (var db = new DollarComputersContext())
             {
                 db.products.Load();
                 productBindingSource.DataSource = db.products.Local.ToBindingList();
                 NextButton.Enabled = false;
+                if (productBindingSource.DataSource != null)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        private void SelectForm_Load(object sender, EventArgs e)
+        {
+            if (!HasLoadedDataSource())
+            {
+                MessageBox.Show("Data Source not loaded properly!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
