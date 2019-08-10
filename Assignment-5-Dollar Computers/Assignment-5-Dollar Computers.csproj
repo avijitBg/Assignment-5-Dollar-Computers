@@ -121,6 +121,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="View\SplashForm.resx">
       <DependentUpon>SplashForm.cs</DependentUpon>
@@ -148,7 +149,10 @@
     <None Include="dollarcomputers.sql" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="desktop.jpg" />
     <Content Include="DollarComputersIcon.ico" />
+    <Content Include="laptop.jpg" />
+    <None Include="Resources\desktop.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

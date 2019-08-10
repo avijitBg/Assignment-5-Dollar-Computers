@@ -648,7 +648,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Your Product";
             this.Activated += new System.EventHandler(this.ProductInfoForm_Activated);
-            this.Load += new System.EventHandler(this.ProductInfoForm_Load);
             this.ProductInfoMenuStrip.ResumeLayout(false);
             this.ProductInfoMenuStrip.PerformLayout();
             this.ProductGroupBox.ResumeLayout(false);

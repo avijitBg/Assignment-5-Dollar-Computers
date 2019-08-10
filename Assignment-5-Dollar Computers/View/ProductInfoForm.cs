@@ -175,10 +175,5 @@ namespace Assignment_5_Dollar_Computers.View
             CPUSpeedTextBox.Text = Program.productDetails.CPUSpeed;
             WebcamTextBox.Text = Program.productDetails.WebCam;
         }
-
-        private void ProductInfoForm_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

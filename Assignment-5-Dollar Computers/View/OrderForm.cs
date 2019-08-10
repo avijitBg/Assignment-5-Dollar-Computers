@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Assignment_5_Dollar_Computers.Properties;
 
 namespace Assignment_5_Dollar_Computers.View
 {
@@ -85,6 +86,17 @@ namespace Assignment_5_Dollar_Computers.View
             PriceTextBox.Text = ($"{price:C2}").ToString();
             TaxTextBox.Text = ($"{tax:C2}").ToString();
             TotalpriceTextBox.Text= ($"{totalPrice:C2}").ToString();
+
+            Image desktopPCImage = Properties.Resources.desktop;
+            Image laptopPCImage = Properties.Resources.laptop;
+            if (Program.productDetails.Platform == "Laptop")
+            {
+                OrderFormPictureBox.Image = laptopPCImage;
+            }
+            else
+            {
+                OrderFormPictureBox.Image = desktopPCImage;
+            }
         }
 
         private void FinishButton_Click(object sender, EventArgs e)
@@ -98,6 +110,17 @@ namespace Assignment_5_Dollar_Computers.View
                 {
                     Application.Exit();
                 }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void OrderForm_Load(object sender, EventArgs e)
+        {
+
+
         }
     }
 }

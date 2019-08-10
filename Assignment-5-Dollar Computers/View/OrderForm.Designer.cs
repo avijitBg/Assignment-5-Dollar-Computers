@@ -40,6 +40,7 @@
             this.ManufacturerLabel = new System.Windows.Forms.Label();
             this.ConditionLabel = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.ProductInfoTextBox = new System.Windows.Forms.TextBox();
             this.GPUTypeLabel = new System.Windows.Forms.Label();
             this.WebCamLabel = new System.Windows.Forms.Label();
             this.OSLabel = new System.Windows.Forms.Label();
@@ -61,7 +62,6 @@
             this.PriceLabel = new System.Windows.Forms.Label();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.lineShape = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.BackButton = new System.Windows.Forms.Button();
             this.CancelButton = new System.Windows.Forms.Button();
             this.FinishButton = new System.Windows.Forms.Button();
@@ -80,14 +80,14 @@
             this.ProductPrintForm = new Microsoft.VisualBasic.PowerPacks.Printing.PrintForm(this.components);
             this.OrderOpenFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.OrderSaveFileDialog = new System.Windows.Forms.SaveFileDialog();
-            this.ProductInfoTextBox = new System.Windows.Forms.TextBox();
+            this.OrderFormPictureBox = new System.Windows.Forms.PictureBox();
             this.SystemPropertiesGroupBox.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.PriceGroupBox.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.OrderFormPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // SystemPropertiesGroupBox
@@ -109,6 +109,8 @@
             // 
             // ModeltextBox
             // 
+            this.ModeltextBox.Enabled = false;
+            this.ModeltextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ModeltextBox.Location = new System.Drawing.Point(321, 46);
             this.ModeltextBox.Name = "ModeltextBox";
             this.ModeltextBox.ReadOnly = true;
@@ -117,6 +119,8 @@
             // 
             // PlatformTextBox
             // 
+            this.PlatformTextBox.Enabled = false;
+            this.PlatformTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PlatformTextBox.Location = new System.Drawing.Point(321, 17);
             this.PlatformTextBox.Name = "PlatformTextBox";
             this.PlatformTextBox.ReadOnly = true;
@@ -125,6 +129,8 @@
             // 
             // ManufacturerTextBox
             // 
+            this.ManufacturerTextBox.Enabled = false;
+            this.ManufacturerTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ManufacturerTextBox.Location = new System.Drawing.Point(119, 46);
             this.ManufacturerTextBox.Name = "ManufacturerTextBox";
             this.ManufacturerTextBox.ReadOnly = true;
@@ -133,6 +139,8 @@
             // 
             // ConditiontextBox
             // 
+            this.ConditiontextBox.Enabled = false;
+            this.ConditiontextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ConditiontextBox.Location = new System.Drawing.Point(119, 17);
             this.ConditiontextBox.Name = "ConditiontextBox";
             this.ConditiontextBox.ReadOnly = true;
@@ -198,6 +206,18 @@
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tech Spec";
+            // 
+            // ProductInfoTextBox
+            // 
+            this.ProductInfoTextBox.BackColor = System.Drawing.Color.White;
+            this.ProductInfoTextBox.Enabled = false;
+            this.ProductInfoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProductInfoTextBox.ForeColor = System.Drawing.Color.Black;
+            this.ProductInfoTextBox.Location = new System.Drawing.Point(121, 21);
+            this.ProductInfoTextBox.Multiline = true;
+            this.ProductInfoTextBox.Name = "ProductInfoTextBox";
+            this.ProductInfoTextBox.Size = new System.Drawing.Size(301, 310);
+            this.ProductInfoTextBox.TabIndex = 10;
             // 
             // GPUTypeLabel
             // 
@@ -324,6 +344,7 @@
             // TotalpriceTextBox
             // 
             this.TotalpriceTextBox.BackColor = System.Drawing.Color.White;
+            this.TotalpriceTextBox.Enabled = false;
             this.TotalpriceTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TotalpriceTextBox.ForeColor = System.Drawing.Color.Black;
             this.TotalpriceTextBox.Location = new System.Drawing.Point(184, 10);
@@ -348,6 +369,7 @@
             this.groupBox3.Controls.Add(this.PriceTextBox);
             this.groupBox3.Controls.Add(this.TaxLabel);
             this.groupBox3.Controls.Add(this.PriceLabel);
+            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(7, 29);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(303, 79);
@@ -357,6 +379,7 @@
             // TaxTextBox
             // 
             this.TaxTextBox.BackColor = System.Drawing.Color.White;
+            this.TaxTextBox.Enabled = false;
             this.TaxTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TaxTextBox.ForeColor = System.Drawing.Color.Black;
             this.TaxTextBox.Location = new System.Drawing.Point(184, 51);
@@ -368,6 +391,7 @@
             // PriceTextBox
             // 
             this.PriceTextBox.BackColor = System.Drawing.Color.White;
+            this.PriceTextBox.Enabled = false;
             this.PriceTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PriceTextBox.ForeColor = System.Drawing.Color.Black;
             this.PriceTextBox.Location = new System.Drawing.Point(184, 19);
@@ -416,14 +440,6 @@
             this.lineShape.X2 = 295;
             this.lineShape.Y1 = 100;
             this.lineShape.Y2 = 98;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(479, 65);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(158, 135);
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
             // 
             // BackButton
             // 
@@ -569,17 +585,13 @@
             // 
             this.OrderOpenFileDialog.FileName = "openFileDialog1";
             // 
-            // ProductInfoTextBox
+            // OrderFormPictureBox
             // 
-            this.ProductInfoTextBox.BackColor = System.Drawing.Color.White;
-            this.ProductInfoTextBox.Enabled = false;
-            this.ProductInfoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ProductInfoTextBox.ForeColor = System.Drawing.Color.Black;
-            this.ProductInfoTextBox.Location = new System.Drawing.Point(121, 21);
-            this.ProductInfoTextBox.Multiline = true;
-            this.ProductInfoTextBox.Name = "ProductInfoTextBox";
-            this.ProductInfoTextBox.Size = new System.Drawing.Size(301, 310);
-            this.ProductInfoTextBox.TabIndex = 10;
+            this.OrderFormPictureBox.Location = new System.Drawing.Point(472, 49);
+            this.OrderFormPictureBox.Name = "OrderFormPictureBox";
+            this.OrderFormPictureBox.Size = new System.Drawing.Size(160, 140);
+            this.OrderFormPictureBox.TabIndex = 9;
+            this.OrderFormPictureBox.TabStop = false;
             // 
             // OrderForm
             // 
@@ -587,11 +599,11 @@
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(784, 461);
             this.ControlBox = false;
+            this.Controls.Add(this.OrderFormPictureBox);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.FinishButton);
             this.Controls.Add(this.CancelButton);
             this.Controls.Add(this.BackButton);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.PriceGroupBox);
             this.Controls.Add(this.SystemPropertiesGroupBox);
             this.Controls.Add(this.menuStrip1);
@@ -600,6 +612,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Order Form";
             this.Activated += new System.EventHandler(this.OrderForm_Activated);
+            this.Load += new System.EventHandler(this.OrderForm_Load);
             this.SystemPropertiesGroupBox.ResumeLayout(false);
             this.SystemPropertiesGroupBox.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -609,9 +622,9 @@
             this.groupBox4.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.OrderFormPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -647,7 +660,6 @@
         private System.Windows.Forms.TextBox PriceTextBox;
         private System.Windows.Forms.Label TaxLabel;
         private System.Windows.Forms.Label PriceLabel;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button BackButton;
         private System.Windows.Forms.Button CancelButton;
         private System.Windows.Forms.Button FinishButton;
@@ -669,5 +681,6 @@
         private System.Windows.Forms.OpenFileDialog OrderOpenFileDialog;
         private System.Windows.Forms.SaveFileDialog OrderSaveFileDialog;
         private System.Windows.Forms.TextBox ProductInfoTextBox;
+        private System.Windows.Forms.PictureBox OrderFormPictureBox;
     }
 }
