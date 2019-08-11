@@ -8,7 +8,7 @@ using System.Windows.Forms;
 /*Assignment-5: Dollar Computers
  * Author: Avijit Bagchi
  * ID# 301007115
- * Version: 3.0 Unit testing project created
+ * Version: 3.1 Unit testing completed
  * Last Modified: August 10, 2019
  */
 namespace Assignment_5_Dollar_Computers.View
