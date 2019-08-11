@@ -44,6 +44,7 @@ namespace Assignment_5_Dollar_Computers.View
         private void ProductDataGridView_SelectionChanged(object sender, EventArgs e)
         {
             NextButton.Enabled = true;
+            productDataGridViewSelectedItem();
             SelectionTextBox.Text=productDataGridViewSelectedItem();   
         } 
     }

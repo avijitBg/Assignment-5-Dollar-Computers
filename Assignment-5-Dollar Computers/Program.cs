@@ -34,7 +34,7 @@ namespace Assignment_5_Dollar_Computers.View
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
+            //Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             splashForm = new SplashForm();
             startForm = new StartForm();

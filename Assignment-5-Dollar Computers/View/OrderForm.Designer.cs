@@ -446,7 +446,7 @@
             this.BackButton.BackColor = System.Drawing.Color.DarkGreen;
             this.BackButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BackButton.ForeColor = System.Drawing.Color.White;
-            this.BackButton.Location = new System.Drawing.Point(518, 422);
+            this.BackButton.Location = new System.Drawing.Point(495, 419);
             this.BackButton.Name = "BackButton";
             this.BackButton.Size = new System.Drawing.Size(75, 40);
             this.BackButton.TabIndex = 5;
@@ -459,7 +459,7 @@
             this.CancelButton.BackColor = System.Drawing.Color.DarkGreen;
             this.CancelButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CancelButton.ForeColor = System.Drawing.Color.White;
-            this.CancelButton.Location = new System.Drawing.Point(617, 422);
+            this.CancelButton.Location = new System.Drawing.Point(594, 419);
             this.CancelButton.Name = "CancelButton";
             this.CancelButton.Size = new System.Drawing.Size(75, 40);
             this.CancelButton.TabIndex = 6;
@@ -472,7 +472,7 @@
             this.FinishButton.BackColor = System.Drawing.Color.DarkGreen;
             this.FinishButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FinishButton.ForeColor = System.Drawing.Color.White;
-            this.FinishButton.Location = new System.Drawing.Point(709, 422);
+            this.FinishButton.Location = new System.Drawing.Point(687, 419);
             this.FinishButton.Name = "FinishButton";
             this.FinishButton.Size = new System.Drawing.Size(75, 40);
             this.FinishButton.TabIndex = 7;

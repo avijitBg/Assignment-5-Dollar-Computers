@@ -50,7 +50,7 @@
             this.NewOrderButton.BackColor = System.Drawing.Color.DarkGreen;
             this.NewOrderButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NewOrderButton.ForeColor = System.Drawing.Color.White;
-            this.NewOrderButton.Location = new System.Drawing.Point(181, 295);
+            this.NewOrderButton.Location = new System.Drawing.Point(192, 297);
             this.NewOrderButton.Name = "NewOrderButton";
             this.NewOrderButton.Size = new System.Drawing.Size(209, 40);
             this.NewOrderButton.TabIndex = 1;
@@ -63,7 +63,7 @@
             this.SavedOrderButton.BackColor = System.Drawing.Color.DarkGreen;
             this.SavedOrderButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SavedOrderButton.ForeColor = System.Drawing.Color.White;
-            this.SavedOrderButton.Location = new System.Drawing.Point(149, 341);
+            this.SavedOrderButton.Location = new System.Drawing.Point(149, 343);
             this.SavedOrderButton.Name = "SavedOrderButton";
             this.SavedOrderButton.Size = new System.Drawing.Size(280, 40);
             this.SavedOrderButton.TabIndex = 2;
@@ -87,7 +87,7 @@
             // StartForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.LightGray;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(584, 441);
             this.ControlBox = false;
             this.Controls.Add(this.ExitButton);

@@ -154,6 +154,7 @@
   <ItemGroup>
     <Content Include="desktop.jpg" />
     <Content Include="DollarComputersIcon.ico" />
+    <None Include="DollarComutersLogo.png" />
     <Content Include="laptop.jpg" />
     <None Include="Resources\desktop.jpg" />
   </ItemGroup>
